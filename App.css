@@ -1,0 +1,32 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg-primary:#090d14;
+  --bg-secondary:#111827;
+  --bg-card:#161d2d;
+  --accent:#6366f1;
+  --text-primary:#f1f5f9;
+  --text-secondary:#94a3b8;
+  --text-muted:#475569;
+  --border:rgba(255,255,255,0.07);
+}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-primary);color:var(--text-primary);min-height:100vh}
+.app{display:flex;min-height:100vh}
+.sidebar{width:240px;background:var(--bg-secondary);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;height:100vh;z-index:100}
+.sidebar-logo{display:flex;align-items:center;gap:10px;padding:22px 18px;border-bottom:1px solid var(--border)}
+.logo-text{font-size:17px;font-weight:800;background:linear-gradient(135deg,#818cf8,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-section-label{font-size:10px;font-weight:700;letter-spacing:1.2px;color:var(--text-muted);text-transform:uppercase;padding:18px 18px 8px}
+.nav-links{list-style:none;padding:0 8px}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;cursor:pointer;color:var(--text-secondary);font-size:14px;font-weight:500;transition:all .15s;margin-bottom:2px;border:1px solid transparent}
+.nav-item:hover{background:rgba(255,255,255,0.05);color:var(--text-primary)}
+.nav-item.active{background:rgba(99,102,241,0.15);color:#a5b4fc;border-color:rgba(99,102,241,0.2)}
+.nav-icon{font-size:16px;width:20px;text-align:center}
+.sidebar-footer{margin-top:auto;padding:16px 18px;border-top:1px solid var(--border)}
+.status-dot{width:7px;height:7px;background:#10b981;border-radius:50%;display:inline-block;margin-right:6px;animation:pulse 2s infinite;box-shadow:0 0 5px #10b981}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.main-content{flex:1;margin-left:240px;padding:28px 32px;min-height:100vh}
+.input{background:var(--bg-secondary);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:11px 14px;color:var(--text-primary);font-size:14px;outline:none;transition:border-color .15s;font-family:inherit}
+.input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(99,102,241,0.1)}
+.input::placeholder{color:var(--text-muted)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:3px}
